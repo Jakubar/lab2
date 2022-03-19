@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Депозитный калькулятор</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="calc" onclick="calc()">
+  <p class="text text-1">СУММА СБЕРЕЖЕНИЙ:</p>
+  <div class="range-slider" onclick="calc()">
+    <input type="number" id="sum" class="range-value" step="1000" min="5000" max="100000" value="50000" onchange="calc()"  onclick="calc()" />
+  <div class="clr"></div>
+  <input class="input-range" type="range" step="1000" min="5000" max="100000" value="50000"   onclick="calc()">
+  </div>
+  <div class="clr"></div>
+  <p class="text text-2"><b>ВЫБЕРИТЕ СРОК РАЗМЕЩЕНИЯ:</b></p>
+  
+  <input type="radio" name="term" 
+  id="m3" class="input-hid" onclick="calc()" />
+<label for="m3"><p>3 мес.</p></label>
+  
+  <input type="radio" name="term" 
+  id="m6" class="input-hid" onclick="calc()"/>
+<label for="m6"><p>6 мес.</p></label>
+
+<input type="radio" name="term" 
+  id="m9" class="input-hid" onclick="calc()" checked/>
+<label for="m9"><p>9 мес</p></label>
+  
+  <input type="radio" name="term" 
+  id="m12" class="input-hid" onclick="calc()" checked/>
+<label for="m12"><p>12 мес</p></label>
+
+<input type="radio" name="term" 
+  id="1.5y" class="input-hid" onclick="calc()" checked/>
+<label for="1.5y"><p>1,5 Года</p></label>
+
+<input type="radio" name="term" 
+  id="2y" class="input-hid" onclick="calc()" checked/>
+<label for="2y"><p>2 Года</p></label>
+
+
+
+  
+  <div class="clr"></div>
+  
+  <p class="text text-3"><b>ВЫБЕРИТЕ ПРОГРАММУ СБЕРЕЖЕНИЙ:</b></p>
+  
+  <input type="radio" name="prog" id="p1" class="input-hid" onclick="calc()" />
+  <label for="p1">  <p>СРОЧНЫЙ</p> </label>
+  
+  <input type="radio" name="prog" id="p2" class="input-hid" onclick="calc()" />
+  <label for="p2">  <p>ПОПОЛНЯЕМЫЙ</p> </label>
+  
+  
+  <div class="clr"></div>
+  
+  <div class="roww">
+    <p class="text top20">СТАВКА: </p>
+    <p class="text-out"><span id="stavka">0%</span></p>
+  </div>  
+  <div class="roww">
+    <p class="text top20">К ВЫПЛАТЕ: </p>
+    <p class="text-out"><span id="plata">0</span></p>
+  </div>
+  
+  <div style="clear:both"></div>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</body>
+</html>
